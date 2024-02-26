@@ -1,9 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="weather-app">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <RouterView v-slot="{ Component }">
+      <OpacityTransition>
+        <Component :is="Component"/>
+      </OpacityTransition>
+    </RouterView>
+  </div>
 </template>
 
 <style>
@@ -28,3 +34,6 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script setup lang="ts">
+import OpacityTransition from "@/components/transitions/OpacityTransition.vue";
+</script>
