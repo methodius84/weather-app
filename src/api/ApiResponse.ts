@@ -1,7 +1,9 @@
 import {City} from "@/classes/City";
+import {CityForecast} from "@/classes/CityForecast";
 
 export interface ApiResponse {
-    Cities: City[]
+    Cities: City[],
+    Forecast: CityForecast,
 }
 
 export type ApiResponseKeys = keyof ApiResponse

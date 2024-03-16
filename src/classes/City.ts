@@ -1,10 +1,14 @@
 
-export class City {
-    id: number
-    name: string
-
-    constructor(id: number, name: string) {
-        this.id = id
-        this.name = name
-    }
+export interface City {
+    uuid: string,
+    name: string,
+    name_ru: string,
+    lat: number,
+    lon: number,
+    country: string,
+    timezone: number,
+    sunrise: Date,
+    sunset: Date,
+    created_at: Date,
+    updated_at: Date
 }
