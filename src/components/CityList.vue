@@ -17,21 +17,21 @@ async function loadCities() {
     console.log('Error fetching cities: ', e)
   }
 }
-
-const toggleCity = (uuid: string) => {
-  console.log(uuid)
-}
 </script>
 
 <template>
   <div class="city-wrapper" v-if="cities">
     <div v-for="city in cities" :key="city.uuid">
-      <button @click="toggleCity(city.uuid)">Показать</button>
-      <WeatherCard :city="city"/>
+      <WeatherCard class="city" :city="city"/>
     </div>
   </div>
 </template>
 
 <style scoped>
-
+.city-wrapper {
+  position: relative;
+  justify-content: start;
+  flex-direction: column;
+  padding: 10px;
+}
 </style>
