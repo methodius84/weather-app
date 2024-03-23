@@ -9,3 +9,9 @@
 // const location = navigator.geolocation.getCurrentPosition()
 import CityList from "@/components/CityList.vue";
 </script>
+
+<style>
+.home {
+  position: relative;
+}
+</style>

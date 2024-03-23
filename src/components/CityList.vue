@@ -2,7 +2,7 @@
 import {onMounted, ref} from "vue";
 import api from "@/api";
 import {City} from "@/classes/City";
-import WeatherCard from "@/components/WeatherCard.vue";
+import CityComponent from "@/components/CityComponent.vue";
 
 const cities = ref<City[]>([])
 
@@ -22,7 +22,7 @@ async function loadCities() {
 <template>
   <div class="city-wrapper" v-if="cities">
     <div v-for="city in cities" :key="city.uuid">
-      <WeatherCard class="city" :city="city"/>
+      <CityComponent :city="city"/>
     </div>
   </div>
 </template>
