@@ -36,7 +36,7 @@ async function toggleCity(uuid: string) {
 <template>
 <div class="city-wrapper">
   <div class="city-data">
-    <h3>{{ city.name }}</h3>
+    <p>{{ city.name }}</p>
     <button class="weather-button" @click="toggleCity(city.uuid)">{{buttonText}}</button>
   </div>
   <WeatherCard v-if="cityDataToggle" :forecast="data"/>
@@ -45,7 +45,7 @@ async function toggleCity(uuid: string) {
 
 <style scoped>
 .city-wrapper {
-  flex-direction: row;
+  position: relative;
   & > .city-data {
     position: relative;
     flex-direction: row;

@@ -20,15 +20,14 @@ async function loadCities() {
 </script>
 
 <template>
-  <div class="city-wrapper" v-if="cities">
-    <div v-for="city in cities" :key="city.uuid">
-      <CityComponent :city="city"/>
-    </div>
+  <div class="city-wrapper" v-for="city in cities" :key="city.uuid">
+    <CityComponent :city="city"/>
   </div>
 </template>
 
 <style scoped>
 .city-wrapper {
+  display: flex;
   position: relative;
   justify-content: start;
   flex-direction: column;

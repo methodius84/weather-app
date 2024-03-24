@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import {defineProps, onMounted, ref} from "vue";
+import {defineProps} from "vue";
 import {CityForecast} from "@/classes/CityForecast";
 
 const props = defineProps<{
   forecast: CityForecast
 }>()
-
-onMounted(() => {
-  console.log(props.forecast)
-})
 </script>
 
 <template>
   <div class="card-wrapper">
-    <div class="weather-title">Now</div>
+    <div class="weather-title">Today's overview</div>
     <div class="weather-header">
       <div class="temperature">
         Temperature: {{forecast.temperature}} &#x2103;
@@ -54,7 +50,7 @@ onMounted(() => {
     border: 1px solid #2c3e50;
     background-color: #2c3e50;
     color: white;
-    padding: 3px;
+    padding: 5px;
     font-weight: bolder;
     margin: 5px;
   }
