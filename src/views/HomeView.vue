@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <h1>Welcome to weather app</h1>
-    <CityList/>
+    <div class="city-list">
+      <CityList/>
+    </div>
   </div>
 </template>
 
@@ -13,5 +15,9 @@ import CityList from "@/components/CityList.vue";
 <style>
 .home {
   position: relative;
+  & > .city-list {
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+  }
 }
 </style>
