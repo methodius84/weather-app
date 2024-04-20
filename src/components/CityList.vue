@@ -31,6 +31,6 @@ async function loadCities() {
   position: relative;
   justify-content: start;
   flex-direction: column;
-  padding: 10px;
+  padding: 5px;
 }
 </style>
