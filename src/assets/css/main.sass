@@ -1,0 +1,42 @@
+@import "fonts"
+@import "variables"
+@import "header"
+@import "home-view"
+
+*, *:before, *:after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  position: relative
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-style: normal
+  color: $text-main
+  font-size: $font-size
+  h1
+    font-family: "Bricolage Grotesque", sans-serif
+    font-size: 3em
+  button, a
+    padding: 0.5em 1.5em
+    text-decoration: none
+    background-color: $primary-background
+    color: $button-text-alternative
+    font-size: $font-size
+    font-weight: bold
+    font-family: "Bricolage Grotesque", sans-serif
+    border: none
+    border-radius: 8px
+    line-height: 1.15
+
+.container-wide
+  margin: auto
+  width: 100%
+  height: auto
+
+.container
+  padding: 0 0.75em
+  width: 100%
+  margin-left: auto
+  margin-right: auto

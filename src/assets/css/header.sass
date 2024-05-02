@@ -1,0 +1,21 @@
+@import "variables"
+
+.header
+  padding: 0.75em
+  position: relative
+  display: flex
+  flex-direction: row
+  align-items: center
+  .app-name
+    width: 50%
+    color: $text-main
+    font-size: 2em
+    font-weight: bold
+    text-align: left
+  nav
+    width: 50%
+    height: auto
+    text-align: right
+  nav a.router-link-exact-active
+    background-color: $card-background
+    color: $button-text
