@@ -1,0 +1,63 @@
+@import "mixin"
+@import "variables"
+
+.container
+  color: $text-neutral-dark
+.search-title
+  padding: 6em 3em
+  text-align: center
+.search
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 1.5em 0
+  padding: 0 1em
+  flex-wrap: nowrap
+  svg
+    width: 24px
+    height: 24px
+    margin-left: .75em
+    @include for-size(phone-only)
+      width: 20px
+      height: 20px
+      margin-left: .2em
+  &__input
+    width: 100%
+    position: relative
+    @include for-size(tablet-portrait-up)
+      width: 350px
+    input
+      width: 100%
+      flex-grow: 1
+      display: flex
+      align-items: center
+      font-weight: 500
+      color: $text-neutral-dark
+      padding: 1em
+      border-radius: .75em
+      border: 2px solid $input-color
+      outline: none
+    span.placeholder
+      position: absolute
+      margin: 1em 0
+      padding: 0 4px
+      font-family: Roboto, sans-serif
+      color:  #6c757d
+      display: flex
+      align-items: center
+      top: 0
+      left: 1em
+      transition: all 0.3s
+      transform-origin: 0 0
+      background: none
+      pointer-events: none
+    input:valid + span.placeholder,
+    input:focus + span.placeholder
+      transform: scale(0.8) translateY(-30px)
+      background: #fff
+    input:focus
+      color: $text-neutral-dark
+      border-color: $text-neutral-dark
+    input:focus + span.placeholder
+      color: $text-neutral-dark
