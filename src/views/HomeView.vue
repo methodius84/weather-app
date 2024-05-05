@@ -7,7 +7,7 @@
       </h1>
       <div class="button-group">
         <button @click="getStarted">Get started</button>
-        <button class="about">Learn More &#8594;</button>
+        <button @click="learnMore" class="about">Learn More &#8594;</button>
       </div>
     </div>
     <div class="features">
@@ -153,6 +153,12 @@ const data = {
 const getStarted = () => {
   router.push({
     name: 'search',
+  })
+}
+
+const learnMore = () => {
+  router.push({
+    name: 'about',
   })
 }
 </script>
