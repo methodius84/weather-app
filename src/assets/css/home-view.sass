@@ -2,11 +2,14 @@
 @import "mixin"
 
 .container-wide
+  color: $text-neutral-dark
   .title-wrapper
     padding: 6em 3em
     display: flex
     flex-direction: column
     row-gap: 1.5em
+    h1
+      text-align: center
   .button-group
     display: flex
     flex-direction: row
@@ -48,3 +51,116 @@
           flex-direction: column
           justify-content: flex-start
           align-items: flex-start
+  .pricing
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 4em 3em
+    background-color: $main-background
+    width: 100%
+    height: auto
+    flex: 0 0 auto
+    flex-direction: column
+    &__header
+      width: auto
+      height: auto
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      gap: 1em
+      margin-bottom: 2em
+      span
+        display: block
+        font-size: .75em
+        font-family: "Bricolage Grotesque", sans-serif
+        text-transform: uppercase
+        font-weight: bold
+        line-height: 150%
+    &__container
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 2em
+      flex-direction: column
+      @include for-size(tablet-landscape-up)
+        flex-direction: row
+    &__card
+      padding: 2em
+      width: 100%
+      max-width: 450px
+      min-height: 450px
+      height: auto
+      background-color: $card-background
+      margin-bottom: 2em
+      margin-right: 0
+      border-radius: .25em
+      @include for-size(tablet-landscape-up)
+        max-width: 450px
+        margin-bottom: 0
+      &__header
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        gap: 1.5em
+        &__title
+          font-size: 1.25em
+          text-align: center
+          font-family: "Bricolage Grotesque", sans-serif
+          font-weight: 600
+          line-height: 150%
+          text-transform: uppercase
+        &__description
+          align-items: flex-start
+          font-family: "Bricolage Grotesque", sans-serif
+          font-weight: 400
+          line-height: 150%
+      &__price
+        margin-bottom: 2em
+        display: flex
+        align-items: center
+        flex-direction: row
+        span:nth-child(odd)
+          width: auto
+          height: auto
+          margin-top: 2em
+          font-size: 1.15rem
+          font-weight: 300
+        span:nth-child(even)
+          font-size: 4rem
+          font-weight: 700
+      &__features
+        width: 100%
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        margin-bottom: 1em
+        &__feature-container
+          width: 100%
+          display: flex
+          flex-direction: row
+          gap: .25em
+          margin-bottom: 1em
+          flex: 0 0 auto
+      button
+        width: 100%
+  .banner
+    padding: 2em 1em
+    width: 100%
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-between
+    @include for-size(tablet-landscape-up)
+      padding: 6em 2em
+    @include for-size(desktop-up)
+      padding: 6em 5em
+    &__text
+      text-align: center
+      margin-bottom: 2em
+    &__more
+      width: fit-content
+      height: auto
+      padding: .5em 1.5em

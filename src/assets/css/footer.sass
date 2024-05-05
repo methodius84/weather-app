@@ -1,0 +1,68 @@
+@import "variables"
+@import "mixin"
+
+.footer
+  padding: 1em
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  @include for-size(tablet-landscape-up)
+    padding: 1em 2em
+  @include for-size(desktop-up)
+    padding: 2em 3em
+  &__menu
+    display: flex
+    max-width: 100%
+    align-items: center
+    flex-direction: column
+    justify-content: flex-start
+    gap: 1em
+    nav
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      flex: 0 0 auto
+      gap: 1em
+      a
+        padding: 0
+        font-size: 1em
+        font-weight: 400
+        color: $text-neutral-dark
+        background: none
+  &__separator
+    width: 100%
+    margin: 1.5em 0
+    border: 0 solid #D9D9D9
+    border-bottom-width: 1px
+    display: flex
+    flex-direction: row
+    @include for-size(tablet-landscape-up)
+      margin: 2em 0
+  &__container
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex: 0 0 auto
+    flex-direction: column
+    @include for-size(tablet-landscape-up)
+      flex-direction: row
+    &__text
+      margin-bottom: 1.5em
+      @include for-size(phone-only)
+        text-align: center
+      @include for-size(tablet-landscape-up)
+        margin-bottom: 0
+    &__icons
+      display: flex
+      align-items: center
+      flex-direction: row
+      gap: 2em
+      a
+        padding: 0
+        background: none
+        svg
+          width: 24px
+          height: 24px

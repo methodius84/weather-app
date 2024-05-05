@@ -2,6 +2,7 @@
 @import "variables"
 @import "header"
 @import "home-view"
+@import "footer"
 
 *, *:before, *:after
   box-sizing: border-box
@@ -10,11 +11,12 @@
 
 body
   position: relative
-  font-family: "Roboto", sans-serif
+  font-family: "Inter", sans-serif
   font-weight: 400
   font-style: normal
   color: $text-main
   font-size: $font-size
+  line-height: 1.15
   h1
     font-family: "Bricolage Grotesque", sans-serif
     font-size: 3em
@@ -25,6 +27,7 @@ body
     font-family: "Bricolage Grotesque", sans-serif
     font-size: 1.25em
   button, a
+    width: fit-content
     padding: 0.5em 1.5em
     text-decoration: none
     background-color: $primary-background
@@ -34,6 +37,17 @@ body
     font-family: "Bricolage Grotesque", sans-serif
     border: none
     border-radius: 8px
+    line-height: 1.15
+  .button-outline
+    color: $text-neutral-dark
+    font-size: $font-size
+    font-weight: bold
+    font-family: "Bricolage Grotesque", sans-serif
+    text-decoration: none
+    border: 1px solid
+    padding: 0.5em 1.5em
+    border-radius: 8px
+    background: none
     line-height: 1.15
 
 .container-wide
