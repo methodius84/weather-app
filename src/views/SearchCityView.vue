@@ -1,6 +1,29 @@
 <script setup lang="ts">
 
 import SearchIcon from "@/components/icons/SearchIcon.vue";
+import {reactive, watch} from "vue";
+import { City } from "@/classes/City";
+import api from "@/api";
+
+const data = reactive({
+  cities: {
+    type: Array as City[] | null,
+    default: {}
+  },
+  searchQuery: '',
+  timer: 0
+})
+watch(() => data.searchQuery, nv => {
+  clearTimeout(data.timer)
+  data.timer = setTimeout(() => {
+    const citiesaaa = api.search(nv)
+        .then(citiesObj => citiesObj.Cities)
+        .catch(e => console.error('Error loading cities:', e))
+  }, 500)
+})
+
+
+
 </script>
 
 <template>
@@ -11,11 +34,12 @@ import SearchIcon from "@/components/icons/SearchIcon.vue";
     <div class="search">
 
       <div class="search__input">
-        <input type="text" name="input-text" id="input-text" required spellcheck="false">
+        <input id="input-text" name="input-text" spellcheck="false" type="text" v-model="data.searchQuery">
         <span class="placeholder">Type city name</span>
       </div>
       <SearchIcon/>
     </div>
+    <div class="cities"></div>
   </div>
 </template>
 

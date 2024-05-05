@@ -33,11 +33,21 @@
       display: flex
       align-items: center
       font-weight: 500
+      font-size: 1em
       color: $text-neutral-dark
       padding: 1em
       border-radius: .75em
       border: 2px solid $input-color
       outline: none
+      &:valid + span.placeholder,
+      &:focus + span.placeholder
+        transform: scale(0.8) translateY(-30px)
+        background: #fff
+      &:focus
+        color: $text-neutral-dark
+        border-color: $text-neutral-dark
+      &:focus + span.placeholder
+        color: $text-neutral-dark
     span.placeholder
       position: absolute
       padding: 0 4px
@@ -45,18 +55,9 @@
       color:  #6c757d
       display: flex
       align-items: center
-      top: 1em
+      top: 1.1em
       left: 1em
       transition: all 0.3s
       transform-origin: 0 0
       background: none
       pointer-events: none
-    input:valid + span.placeholder,
-    input:focus + span.placeholder
-      transform: scale(0.8) translateY(-30px)
-      background: #fff
-    input:focus
-      color: $text-neutral-dark
-      border-color: $text-neutral-dark
-    input:focus + span.placeholder
-      color: $text-neutral-dark
