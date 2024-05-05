@@ -116,18 +116,12 @@
       <h1 class="banner__text">Welcome to Your Weather Companion</h1>
       <router-link to="/about" class="banner__more">Learn More</router-link>
     </div>
-<!--    <div class="city-list">-->
-<!--      <CityList/>-->
-<!--    </div>-->
   </div>
 </template>
 
 <script setup lang="ts">
-// const location = navigator.geolocation.getCurrentPosition()
-// import CityList from "@/components/CityList.vue";
 import FeatureCard from "@/components/FeatureCard.vue";
 import router from "@/router";
-import {onBeforeUnmount} from "vue";
 
 const data = {
   features: {
