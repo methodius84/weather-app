@@ -39,15 +39,6 @@
       border-radius: .75em
       border: 2px solid $input-color
       outline: none
-      &:valid + span.placeholder,
-      &:focus + span.placeholder
-        transform: scale(0.8) translateY(-30px)
-        background: #fff
-      &:focus
-        color: $text-neutral-dark
-        border-color: $text-neutral-dark
-      &:focus + span.placeholder
-        color: $text-neutral-dark
     span.placeholder
       position: absolute
       padding: 0 4px
@@ -61,3 +52,67 @@
       transform-origin: 0 0
       background: none
       pointer-events: none
+    input:valid + span.placeholder, input:focus + span.placeholder
+      transform: scale(0.8) translateY(-30px)
+      background: #fff
+    input:focus
+      color: $text-neutral-dark
+      border-color: $text-neutral-dark
+    input:focus + span.placeholder
+      color: $text-neutral-dark
+.cities-wrapper
+  width: 100%
+  height: auto
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  .cities-results
+    width: 100%
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .city-row
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      padding: 0.5em
+      border: 1px solid
+      border-radius: .25em
+
+.load-wrapper
+  position: relative
+  margin-top: 1em
+  height: 2em
+  width: 100%
+  background-color: rgb(211,211,211)
+  z-index: 44
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  border-radius: .25em
+
+.activity
+  position: absolute
+  left: -45%
+  height: 100%
+  width: 45%
+  background-image: linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05))
+  background-image: -moz-linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05))
+  background-image: -webkit-linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05))
+  animation: loading 1s infinite
+  z-index: 45
+
+
+@keyframes loading
+  0%
+    left: -45%
+
+  100%
+    left: 100%
+

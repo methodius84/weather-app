@@ -17,10 +17,8 @@ export const fetcher = async (endpoint: string): Promise<ApiResponse> => {
     const url = config.apiBaseUrl + endpoint
     return await fetch(url, {
         method: 'GET',
-        mode: 'no-cors'
     })
         .then(async s => {
-            console.log(s)
             if (!s.ok) {
                 throw new Error('HTTP Error! Status' + s.status)
             }
