@@ -4,6 +4,7 @@
 @import "home-view"
 @import "footer"
 @import "search-city"
+@import "city-view"
 
 *, *:before, *:after
   box-sizing: border-box
@@ -51,6 +52,13 @@ body
     background: none
     line-height: 1.15
 
+#weather-app
+  min-height: 100vh
+  min-height: 100dvh
+  display: flex
+  flex-direction: column
+  .content
+    flex: 1
 .container-wide
   margin: auto
   width: 100%

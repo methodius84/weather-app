@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from "@/views/AboutView.vue";
 import SearchCityView from "@/views/SearchCityView.vue";
+import CityView from "@/views/CityView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -21,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/search',
     name: 'search',
     component: SearchCityView
+  },
+  {
+    path: '/city/:uuid',
+    name: 'city',
+    component: CityView
   }
 ]
 

@@ -1,7 +1,7 @@
 <template>
   <div id="weather-app">
     <HeaderComponent/>
-    <RouterView v-slot="{ Component }">
+    <RouterView v-slot="{ Component }" class="content">
       <OpacityTransition>
         <Component :is="Component"/>
       </OpacityTransition>
