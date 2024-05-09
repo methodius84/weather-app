@@ -2,8 +2,8 @@
   <div class="container-wide">
     <div class="city-wrapper">
 <!--      @todo переделать дизайн WeatherCard -->
-      <WeatherCard :forecast="data.current" v-if="data.current"/>
-      <div class="load-wrapper" v-if="data.showLoader">
+      <WeatherCard :forecast="data.current" v-if="data.current && !data.showLoader"/>
+      <div class="load-wrapper" v-if="data.showLoader && !data.current">
         <div class="activity"></div>
       </div>
     </div>
