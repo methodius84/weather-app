@@ -68,6 +68,13 @@
   align-items: center
   justify-content: center
   flex-direction: column
+  .load-wrapper
+    margin-top: 1em
+    height: 2em
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    border-radius: .25em
   .cities-results
     width: 100%
     position: relative
@@ -86,36 +93,3 @@
     .city-row:hover
       color: $button-text-alternative
       background-color: $button-hover-color
-
-.load-wrapper
-  position: relative
-  margin-top: 1em
-  height: 2em
-  width: 100%
-  background-color: rgb(211,211,211)
-  z-index: 44
-  overflow: hidden
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  border-radius: .25em
-
-.activity
-  position: absolute
-  left: -45%
-  height: 100%
-  width: 45%
-  background-image: linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05))
-  background-image: -moz-linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05))
-  background-image: -webkit-linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05))
-  animation: loading 1s infinite
-  z-index: 45
-
-
-@keyframes loading
-  0%
-    left: -45%
-
-  100%
-    left: 100%
-

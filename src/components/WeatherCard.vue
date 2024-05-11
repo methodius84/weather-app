@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import {defineProps} from "vue";
-import {CityForecast} from "@/classes/CityForecast";
-
-const props = defineProps<{
-  forecast: CityForecast
-}>()
-</script>
-
 <template>
   <div class="card-wrapper">
     <div class="weather-title">Today's overview</div>
@@ -31,6 +22,15 @@ const props = defineProps<{
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import {defineProps} from "vue";
+import {CityForecast} from "@/classes/CityForecast";
+
+const props = defineProps<{
+  forecast: CityForecast
+}>()
+</script>
 
 <style scoped lang="sass">
 @import "../assets/css/variables"

@@ -1,11 +1,10 @@
 <template>
   <div class="container-wide">
     <div class="city-wrapper">
-<!--      @todo переделать дизайн WeatherCard -->
-      <WeatherCard :forecast="data.current" v-if="data.current && !data.showLoader"/>
-      <div class="load-wrapper" v-if="data.showLoader && !data.current">
+      <div class="load-wrapper" v-if="data.showLoader">
         <div class="activity"></div>
       </div>
+      <WeatherCard :forecast="data.current" v-else-if="data.current !== null"/>
     </div>
   </div>
 </template>
@@ -28,8 +27,9 @@ const data = reactive({
 onMounted(async () => {
   data.showLoader = true
   const cityId = route.params.uuid
-  data.current = await loadCity(cityId as string)
+  const currentWeather = await loadCity(cityId as string)
   data.showLoader = false
+  data.current = currentWeather
 })
 
 const loadCity = async (uuid: string): Promise<CityForecast>  => {
